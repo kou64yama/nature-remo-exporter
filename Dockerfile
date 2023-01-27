@@ -8,8 +8,9 @@ RUN go mod download
 COPY . .
 RUN make
 
-FROM scratch
+FROM gcr.io/distroless/static
 
 COPY --from=builder /workspace/out /app
 
 ENTRYPOINT [ "/app/nature-remo-exporter" ]
+EXPOSE 8080

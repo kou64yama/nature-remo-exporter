@@ -1,0 +1,8 @@
+# https://grafana.com/docs/grafana/latest/administration/provisioning/#dashboards
+
+apiVersion: 1
+
+providers:
+  - name: Nature Remo Dashboards Provider
+    options:
+      path: /var/lib/grafana/dashboards

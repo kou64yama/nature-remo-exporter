@@ -1,0 +1,6 @@
+scrape_configs:
+  - job_name: 'nature_remo'
+    scrape_interval: 5s
+    static_configs:
+      - targets:
+          - nature_remo_exporter:8080
