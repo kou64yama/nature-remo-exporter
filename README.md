@@ -1,5 +1,8 @@
 # Nature Remo Exporter
 
+[![Go](https://github.com/kou64yama/nature-remo-exporter/actions/workflows/go.yml/badge.svg)](https://github.com/kou64yama/nature-remo-exporter/actions/workflows/go.yml)
+[![Docker](https://github.com/kou64yama/nature-remo-exporter/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/kou64yama/nature-remo-exporter/actions/workflows/docker-publish.yml)
+
 Prometheus exporter for [Nature Remo](https://nature.global/nature-remo/).
 
 ## Getting started
