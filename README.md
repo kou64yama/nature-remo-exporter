@@ -7,20 +7,18 @@ Prometheus exporter for [Nature Remo](https://nature.global/nature-remo/).
 
 ## Getting started
 
-Create an access token at https://home.nature.global and create `.env` file.
+Create an access token at https://home.nature.global.
+
+Run the following command to start nature-remo-exporter.
 
 ```bash
-echo -n 'Token: ' >&2; read -s; echo >&2
-echo NATURE_ACCESS_TOKEN="$REPLY" > .env
+echo -n 'Nature Access Token: ' >&2; read -s NATURE_ACCESS_TOKEN; echo >&2
+docker run --name=nature-remo-exporter -d --rm -p 8080:8080 \
+  -e NATURE_ACCESS_TOKEN="$NATURE_ACCESS_TOKEN" \
+  ghcr.io/kou64yama/nature-remo-exporter:main -h 0.0.0.0
 ```
 
-Start all services.
-
-```bash
-docker compose up -d
-```
-
-Open http://localhost:3030 in your browser to access Grafana (user/pass is `admin/admin`).
+Open http://localhost:8080/metrics.
 
 ## Metrics
 
